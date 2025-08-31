@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seethamurugan | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: #ffffff;
+      color: #333333;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, nav, .about-box, .profile-icons, footer {
+      opacity: 0;
+      transform: translateY(-50px);
+      animation: flyInTop 0.6s forwards;
+    }
+
+    header {
+      animation-delay: 0.2s;
+      position: relative;
+      background-color: #0A192F;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .profile-photo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #64FFDA;
+    }
+
+    .header-text h1 {
+      margin-bottom: 5px;
+    }
+
+    .header-text p {
+      margin: 0;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    nav {
+      background: #0A192F;
+      padding: 10px 0;
+      animation-delay: 0.4s;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #64FFDA;
+    }
+
+    .about-box {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation-delay: 0.6s;
+    }
+
+    .about-box:hover {
+      transform: translateY(0) scale(1.05);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+    }
+
+    .about-text {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #0A192F;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .resume-btn:hover {
+      background: #64FFDA;
+      color: #0A192F;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .profile-icons {
+      text-align: center;
+      margin-top: 20px;
+      animation-delay: 0.8s;
+    }
+
+    .profile-icons a {
+      margin: 0 10px;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    .profile-icons a img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+    }
+
+    .profile-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      background: #0A192F;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: auto;
+      animation-delay: 1s;
+    }
+
+    @keyframes flyInTop {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="Images/Kotte Photo.jpg" alt="Seethamurugan Photo" class="profile-photo">
+    <div class="header-text">
+      <h1>Seethamurugan</h1>
+      <p>Computer Science Engineering | App Developer</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="internships.html">Internships</a>
+    <!-- <a href="certificates.html">Certificates</a> -->
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="about-box">
+      <p class="about-text">
+        Currently a pre-final year Computer Science Engineering student at Manakula Vinayagar Institute of Technology. Enthusiastic about exploring new technologies and passionate about developing applications.
+      </p>
+      <a href="Images/RESUME.pdf" class="resume-btn" target="_blank">Resume</a>
+    </section>
+
+    <div class="profile-icons">
+      <a href="https://linkedin.com/in/seethamurugan" target="_blank"><img src="Images/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://github.com/seethamurugan" target="_blank"><img src="Images/github.png" alt="GitHub"></a>
+      <a href="https://leetcode.com/u/seethamurugan/" target="_blank"><img src="Images/leetcode.png" alt="LeetCode"></a>
+      <a href="https://www.codechef.com/users/seetha_19" target="_blank"><img src="Images/Codechef.jpg" alt="CodeChef"></a>
+      <a href="https://www.hackerrank.com/profile/muruganseetha191" target="_blank"><img src="Images/hackerrank.png" alt="HackerRank"></a>
+      <a href="https://www.instagram.com/seethamurugann/" target="_blank"><img src="Images/Instagram.jpg" alt="Instagram"></a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Seethamurugan | Building apps & solutions that matter</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Seethamurugan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header,
+    nav,
+    h2,
+    .project-item,
+    footer {
+      opacity: 0;
+      transform: translateY(-50px);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    header {
+      background-color: #0a192f;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #0a192f;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00adb5;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      flex: 1;
+    }
+
+    h2 {
+      color: #00adb5;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #00adb5;
+      display: inline-block;
+    }
+
+    .project-item {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 5px solid #00adb5;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+
+    a {
+      color: #00adb5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #1f2024;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 30px;
+    }
+
+    .fly-in {
+      animation: flyInTop 0.6s cubic-bezier(0.25,1,0.5,1) forwards;
+    }
+
+    @keyframes flyInTop {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>My Projects</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="internships.html">Internships</a>
+    <!-- <a href="certificate.html">Certificates</a> -->
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section>
+    <h2 id="projectsTitle">Projects</h2>
+
+    <div class="project-item" id="project1">
+      <strong>Portfolio Website:</strong> A personal portfolio built using HTML, CSS, and JavaScript to showcase my profile and work.
+      <br>
+      🔗 <a href="https://seethamurugan.github.io/Portfolio-Website/" target="_blank">View Portfolio</a>
+    </div>
+
+    <div class="project-item" id="project2">
+      <strong>E-commerce Website:</strong> A simple e-commerce web project with product listings, cart system, and clean user interface.
+    </div>
+
+    <div class="project-item" id="project3">
+      <strong>Smart Campus Automation using Motion Sensor:</strong> An IoT project that automates lights and fans using motion detection sensors to reduce power usage on campus.
+    </div>
+
+  </section>
+
+  <footer>
+    <p>Seethamurugan | Building apps & solutions that matter</p>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const elements = [
+        document.querySelector('header'),
+        document.querySelector('nav'),
+        document.getElementById('projectsTitle'),
+        ...document.querySelectorAll('.project-item'),
+        document.querySelector('footer')
+      ];
+
+      // Fly-in each element one by one
+      elements.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add('fly-in');
+        }, 200 * (index + 1)); // stagger animation
+      });
+    });
+  </script>
+</body>
+</html>
